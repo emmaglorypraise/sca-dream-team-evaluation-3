@@ -40,6 +40,10 @@ header form .btn {
   color: #ffffff;
   width: 100%;
 }
+header form .btn:hover {
+  background-color: #057a63;
+  color: #ffffff;
+}
 main .hero{
   display: flex;
   flex-direction: column;
@@ -58,7 +62,7 @@ main .hero-content h1{
   color: #ffffff;
 }
 main .hero-content small{
-  color: #057a63;
+  color: #ffffff;
 }
 main .hero .form-group input{
   width: 100%;
@@ -69,6 +73,40 @@ main .hero .form-group i{
   right: 30px;
   top: 285px;
 }
+main .results{
+  margin: 50px auto;
+  width: 95%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+main .results .img-container{
+  width: 100%;
+  margin: 0px auto;
+}
+main .results img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .results .img-items{
+  background-color: #362f1e;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+main .results .img-items p{
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main .results .img-items p span{
+  font-weight: 400;
+}
+main .results .img-items i{
+  margin: 10px 10px 0px 10px ;
+}
+
 @media( max-width: 410px ){
   main .hero .form-group i{
     position: absolute;
