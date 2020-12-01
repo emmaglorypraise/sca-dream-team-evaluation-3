@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+.container {
+  width: 90%;
+  height: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header .navbar-brand{
+  font-weight: 400;
+}
+header .navbar-brand span{
+  color: #057a63;
+  font-weight: 600;
+}
+header .navbar-light .navbar-toggler{
+  border: none;
+}header .navbar-light .navbar-nav .nav-link{
+  color: #000000;
+}
+header .navbar-light .navbar-nav .nav-link:hover{
+  text-decoration: underline;
+  text-decoration-color: #057a63;
+}
+header .navbar-light .navbar-nav .active{
+  text-decoration: underline;
+  text-decoration-color: #057a63;
+}
+header form .btn {
+  background-color: #057a63;
+  color: #ffffff;
+  width: 100%;
+}
+main .hero{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url(../images/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center ;
+  height: 80vh;
+  width: 100%;
+}
+main .hero-content{
+  margin-top: 170px;
+}
+main .hero-content h1{
+  color: #ffffff;
+}
+main .hero-content small{
+  color: #057a63;
+}
+main .hero .form-group input{
+  width: 100%;
+  position: relative;
+}
+main .hero .form-group i{
+  position: absolute;
+  right: 30px;
+  top: 285px;
+}
+@media( max-width: 410px ){
+  main .hero .form-group i{
+    position: absolute;
+    right: 30px;
+    top: 330px;
+  }
+}
+@media(min-width: 768px){
+  header form .btn {
+    background-color: #057a63;
+    color: #ffffff;
+    width: inherit;
+  }
+  main .hero .form-group i{
+    position: absolute;
+    right: 50px;
+    top: 237px;
+  }
+}
