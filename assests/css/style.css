@@ -55,7 +55,7 @@ main .hero{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center ;
-  height: 80vh;
+  height: 70vh;
   width: 100%;
 }
 main .hero-content{
@@ -78,10 +78,10 @@ main .hero .form-group i{
 }
 main .results{
   margin: 30px auto;
-  width: 95%;
+  width: 90%;
   display: grid;
   grid-gap: 25px;
-  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+  grid-template: auto / repeat(auto-fit, minmax(350px, 1fr));
   
 }
 main .results .img-container{
