@@ -1,12 +1,13 @@
-// FOR MAIN SEARCHBOX 
 const input1 = document.querySelector('.input1');
 const input2 = document.querySelector('.input2');
+const dropdownItem = document.querySelector('.dropdown-item');
 const searchForm = document.querySelector('.form1');
 const searchIcon = document.querySelector('i');
 const searchButton = document.querySelector('.button2');
 const searchResultDiv = document.querySelector('.results');
+const hero = document.querySelector('.hero');
 let searchQuery = ' ';
-// const API_KEY = '19344624-3e6894d47d1f9627a45f24b0a';
+let getValue = ' ';
 
 
 // event handler for search icon
@@ -33,15 +34,16 @@ searchButton.addEventListener('click', (e) => {
   searchImg();  
 })
 
+
+
 // fetching data from API
 fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&per_page=100`)
 .then(response => response.json())
-// .then(data => console.log(data.hits))
-// generateHTML (data.hits);
 .then(data => generateHTML(data.hits))
 
+
+// displaying data from API on browser
 function generateHTML (results){
-  // container.classList.remove('initial');
   let generatedHTML = ' ';
   results.map((result) => {
     generatedHTML += 
@@ -60,12 +62,60 @@ function generateHTML (results){
   searchResultDiv.innerHTML = generatedHTML;
 }
 
+
+// gets photos by search query
 function searchImg() {
   fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&q=${searchQuery}&per_page=100`)
  .then(response => response.json())
-// .then(data => console.log(data.hits))
-// generateHTML (data.hits);
 .then(data => generateHTML(data.hits))
+}
+
+// event handler for dropdown items
+function clickMe() {
+  getValue = document.getElementById('link').text;
+  console.log('getValue:', getValue);
+  category();
+ }
+ function clickMe1() {
+  getValue = document.getElementById('link1').text;
+  console.log('getValue:', getValue);
+  category();
+ }
+ function clickMe2() {
+  getValue = document.getElementById('link2').text;
+  console.log('getValue:', getValue);
+  category();
+ }
+ function clickMe3() {
+  getValue = document.getElementById('link3').text;
+  console.log('getValue:', getValue);
+  category();
+ }
+ function clickMe4() {
+  getValue = document.getElementById('link4').text;
+  console.log('getValue:', getValue);
+  category();
+ }
+ function clickMe5() {
+  getValue = document.getElementById('link5').text;
+  console.log('getValue:', getValue);
+  category();
+ }
+ function clickMe6() {
+  getValue = document.getElementById('link6').text;
+  console.log('getValue:', getValue);
+  category();
+ }
+ function clickMe7() {
+  getValue = document.getElementById('link7').text;
+  console.log('getValue:', getValue);
+  category();
+ }
+function category() {
+  fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&q=${getValue}&per_page=150&category=${getValue}`)
+  .then(response => response.json())
+  .then(data => generateHTML(data.hits))
+  hero.remove();
 }
 
 
@@ -77,39 +127,3 @@ function searchImg() {
 
 
 
-// showData = data => {
-
-//   data.forEach(data => {
-
-//     const card = document.createElement('div');
-//     card.className = "img-container";
-
-//     const photo = document.createElement('img');
-//     photo.src = `${data.previewURL}`;
-
-//     const miniCard = document.createElement('div');
-//     miniCard.className = "img-items";
-
-//     const foodName = document.createElement('h3');
-//     foodName.innerText = ` ${data.recipe.label}`;
-    
-
-//     const para = document.createElement('p');
-//     para.innerText = `Tags: ${data.tags}`;
-
-//     const foodUrl = document.createElement('a');
-//     let link = document.createTextNode("View Recipe Here");
-//     foodUrl.appendChild(link);
-//     foodUrl.title = "View Recipe Here";
-//     foodUrl.href = ` ${data.recipe.url}`;
-    
-
-//     card.appendChild(foodImg);
-//     card.appendChild(foodName);
-//     card.appendChild(foodCal);
-//     card.appendChild(foodUrl);
-//     dataContainer.appendChild(card);
-
-    
-//   });
-// }
