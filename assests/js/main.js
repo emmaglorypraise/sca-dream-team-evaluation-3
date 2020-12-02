@@ -37,7 +37,7 @@ searchButton.addEventListener('click', (e) => {
 
 
 // fetching data from API
-fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&per_page=100`)
+fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&per_page=50`)
 .then(response => response.json())
 .then(data => generateHTML(data.hits))
 
@@ -65,7 +65,7 @@ function generateHTML (results){
 
 // gets photos by search query
 function searchImg() {
-  fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&q=${searchQuery}&per_page=100`)
+  fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&q=${searchQuery}&per_page=50`)
  .then(response => response.json())
 .then(data => generateHTML(data.hits))
 }
@@ -112,7 +112,7 @@ function clickMe() {
   category();
  }
 function category() {
-  fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&q=${getValue}&per_page=150&category=${getValue}`)
+  fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&q=${getValue}&per_page=50&category=${getValue}`)
   .then(response => response.json())
   .then(data => generateHTML(data.hits))
   hero.remove();

@@ -38,6 +38,9 @@ header .navbar-light .navbar-nav .active{
   text-decoration: underline;
   text-decoration-color: #057a63;
 }
+header input{
+  margin-bottom: 5px;
+}
 header form .btn {
   background-color: #057a63;
   color: #ffffff;
@@ -55,7 +58,7 @@ main .hero{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center ;
-  height: 70vh;
+  height: 80vh;
   width: 100%;
 }
 main .hero-content{
@@ -122,6 +125,9 @@ main .results .img-items i{
     background-color: #057a63;
     color: #ffffff;
     width: inherit;
+  }
+  header input{
+    margin-bottom: 0px;
   }
   main .hero .form-group i{
     position: absolute;
