@@ -24,11 +24,11 @@
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Explore <span class="sr-only">(current)</span></a>
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Explore</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,31 +55,19 @@
     </nav>
    </header>
 
-   <main>
-     <section class="hero">
-       <div class="container">
-         <div class="row">
-           <div class="col-md-12">
-             <div class="hero-content">
-               <h1>Search & Download stunning free images </h1>
-               <form class="form1">
-                <div class="form-group">
-                  <input type="text" class="form-control input1"  onfocus="this.value=''"  placeholder="Search Photos here...." aria-describedby="search">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                  <small class="form-text">Suggested: christmas, art, cars, gadgets, people, etc</small>
-                </div>
-              </form>
-               
-             </div>
-           </div>
-         </div>
-       </div>
-     </section>
+  <main >
+    <section id="about">
+      <div class="about-body">
+        <div class="about-content"> 
+            <h1> <a  href="index.html"> Photo<span>Search</span> </a></h1> <br>
+            <p>PhotoSearch is a photo searching and downloading web app(oops, the download feature is not yet available...) You can only view the number of downloads, number of likes and tags for now.</p>
+            <p>It was built by <a href="#">Glory Praise</a> as one of the assessments on the SCA Mentorship Cohort 3 Javascript Track</p>
+            <p>It was built with Pixabay Photo API, HTML, CSS and Vanilla Javascript.</p>
+        </div>
+      </div>
+    </section>
 
-     <section class="results">
-      <!-- generated data -->
-     </section>
-   </main>
+  </main>
 
     <script src="./assests/js/jquery.js"></script>
     <script src="./assests/js/popper.js"></script>

@@ -58,7 +58,7 @@ main .hero{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center ;
-  height: 80vh;
+  height: 100%h;
   width: 100%;
 }
 main .hero-content{
@@ -69,6 +69,7 @@ main .hero-content h1{
 }
 main .hero-content small{
   color: #ffffff;
+  margin-bottom: 70px;
 }
 main .hero .form-group input{
   width: 100%;
@@ -77,7 +78,7 @@ main .hero .form-group input{
 main .hero .form-group i{
   position: absolute;
   right: 30px;
-  top: 285px;
+  top: 330px;
 }
 main .results{
   margin: 30px auto;
@@ -85,7 +86,6 @@ main .results{
   display: grid;
   grid-gap: 25px;
   grid-template: auto / repeat(auto-fit, minmax(350px, 1fr));
-  
 }
 main .results .img-container{
   width: 100%;
@@ -112,12 +112,61 @@ main .results .img-items p span{
 main .results .img-items i{
   margin: 5px 10px 0px 10px ;
 }
+main #about{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), url(../images/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center ;
+  height: 100vh;
+  width: 100%;
+  padding-top: 80px;
+  text-align: center;
+}
+main #about .about-body{ 
+  width: 90%;
+  height: 80vh;
+  margin: 20px auto 10px;
+  background-color: #057a63;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+  color: #ffffff;
+}
+#about .about-content{
+  width: 90%;
+  margin: 0px auto;
+  padding-top: 50px;
+}
+#about .about-body h1{
+  font-size: 30px;
+  display: inline;
+}
+#about .about-body h1 a{
+  color: #ffffff;
+  text-align: center;
+}
+#about .about-body h1 a span{
+  color: #057a63;
+}
+#about .about-content p{
+  text-align: justify;
+}
+#about .about-content p a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 
 @media( max-width: 410px ){
   main .hero .form-group i{
     position: absolute;
     right: 30px;
-    top: 330px;
+    top: 379px;
+  }
+}
+@media( max-width: 825px  ) and (min-width: 426px ){
+  main .hero .form-group i{
+    position: absolute;
+    right: 30px;
+    top: 285px;
   }
 }
 @media(min-width: 768px){
@@ -129,6 +178,13 @@ main .results .img-items i{
   header input{
     margin-bottom: 0px;
   }
+  main .hero .form-group i{
+    position: absolute;
+    right: 50px;
+    top: 285px;
+  }
+}
+@media (min-width: 826px){
   main .hero .form-group i{
     position: absolute;
     right: 50px;
