@@ -8,6 +8,7 @@ const searchResultDiv = document.querySelector('.results');
 const hero = document.querySelector('.hero');
 let searchQuery = ' ';
 let getValue = ' ';
+const API_KEY = '19344624-3e6894d47d1f9627a45f24b0a';
 
 
 // event handler for search icon
@@ -37,7 +38,7 @@ searchButton.addEventListener('click', (e) => {
 
 
 // fetching data from API
-fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&per_page=50`)
+fetch(`https://pixabay.com/api/?key=${API_KEY}&per_page=50`)
 .then(response => response.json())
 .then(data => generateHTML(data.hits))
 
@@ -65,7 +66,7 @@ function generateHTML (results){
 
 // gets photos by search query
 function searchImg() {
-  fetch(`https://pixabay.com/api/?key=19344624-3e6894d47d1f9627a45f24b0a&q=${searchQuery}&per_page=50`)
+  fetch(`https://pixabay.com/api/?key=${API_KEY}&q=${searchQuery}&per_page=50`)
  .then(response => response.json())
 .then(data => generateHTML(data.hits))
 }
