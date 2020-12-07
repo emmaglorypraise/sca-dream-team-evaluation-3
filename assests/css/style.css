@@ -92,8 +92,8 @@ main .results .img-container{
   margin: 0px auto;
 }
 main .results img{
-   width: inherit; 
-  height: inherit; 
+  width: inherit; 
+  max-height: 400px; 
   object-fit: cover;
 }
 main .results .img-items{
