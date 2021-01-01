@@ -10,7 +10,6 @@ let searchQuery = ' ';
 let getValue = ' ';
 const API_KEY = '19344624-3e6894d47d1f9627a45f24b0a';
 
-
 // event handler for search icon
 searchIcon.addEventListener('click', (e) => {
   e.preventDefault();
@@ -35,13 +34,10 @@ searchButton.addEventListener('click', (e) => {
   searchImg();  
 })
 
-
-
 // fetching data from API
 fetch(`https://pixabay.com/api/?key=${API_KEY}&per_page=50`)
 .then(response => response.json())
 .then(data => generateHTML(data.hits))
-
 
 // displaying data from API on browser
 function generateHTML (results){

@@ -93,7 +93,7 @@ main .results .img-container{
 }
 main .results img{
   width: inherit; 
-  max-height: 400px; 
+  height: 400px; 
   object-fit: cover;
 }
 main .results .img-items{
